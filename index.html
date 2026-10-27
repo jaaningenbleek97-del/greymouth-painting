@@ -164,5 +164,17 @@ document.getElementById('quote-form').addEventListener('submit',function(e){
 });
 </script>
 <a class="sticky-call" href="tel:02108497254">Call for a free quote</a>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16870094715"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','AW-16870094715');
+document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;
+  var href=a.getAttribute('href')||'';
+  if(href.indexOf('tel:')===0){gtag('event','conversion',{'send_to':'AW-16870094715/NRyGCJOC-KsdEPvupOw-'});}
+  else if(href.indexOf('mailto:')===0){gtag('event','conversion',{'send_to':'AW-16870094715/F3M8CJaC-KsdEPvupOw-'});}
+});
+document.getElementById('quote-form').addEventListener('submit',function(){gtag('event','conversion',{'send_to':'AW-16870094715/F3M8CJaC-KsdEPvupOw-'});});
+</script>
 </body>
 </html>
