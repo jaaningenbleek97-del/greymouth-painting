@@ -119,7 +119,7 @@
   <h2>Get a free quote</h2>
   <p>Talk to Jaan Ingenbleek directly, or send the form below.</p>
   <!-- Quote form: no backend yet. To use a form service later, swap the action URL and remove enctype. -->
-  <form class="quote" action="mailto:greymouthpaintingspecialists@gmail.com" method="post" enctype="text/plain">
+  <form class="quote" id="quote-form" action="mailto:greymouthpaintingspecialists@gmail.com" method="post" enctype="text/plain">
     <label>Name<input type="text" name="name" autocomplete="name" required></label>
     <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
     <label>Email<input type="email" name="email" autocomplete="email"></label>
@@ -155,6 +155,14 @@
   </div>
 </footer>
 
+<script>
+document.getElementById('quote-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var f=this,v=function(n){return (f.elements[n].value||'').trim();};
+  var body='Hi Jaan,\n\nI would like a free quote.\n\nName: '+v('name')+'\nPhone: '+v('phone')+'\nEmail: '+v('email')+'\nJob type: '+v('job_type')+'\nLocation: '+v('location')+'\n\nDetails:\n'+v('details')+'\n';
+  window.location.href='mailto:greymouthpaintingspecialists@gmail.com?subject='+encodeURIComponent('Free quote request from '+v('name'))+'&body='+encodeURIComponent(body);
+});
+</script>
 <a class="sticky-call" href="tel:02108497254">Call for a free quote</a>
 </body>
 </html>
