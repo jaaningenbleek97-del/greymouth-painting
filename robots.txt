@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jaaningenbleek97-del.github.io/greymouth-painting/sitemap.xml
+Sitemap: https://greymouthpaintingspecialists.com/sitemap.xml
